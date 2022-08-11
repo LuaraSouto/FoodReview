@@ -1,0 +1,37 @@
+{
+  "name": "foodreview",
+  "version": "1.0.0",
+  "description": "Sistema de avaliação de restaurantes",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "cross-env NODE_ENV=producao node index",
+    "dev": "cross-env NODE_ENV=desenvolvimento node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuaraSouto/FoodReview.git"
+  },
+  "keywords": [
+    "review",
+    "app",
+    "food",
+    "restaurant"
+  ],
+  "author": "Luara Souto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LuaraSouto/FoodReview/issues"
+  },
+  "homepage": "https://github.com/LuaraSouto/FoodReview#readme",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.21.3"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
+}
