@@ -1,5 +1,5 @@
-import Sequelize from "sequelize";
-import connection from "../config/db.js";
+import Sequelize from 'sequelize';
+import connection from '../config/db.js';
 
 const Review = connection.define(
     'review',
@@ -8,13 +8,13 @@ const Review = connection.define(
             type: Sequelize.INTEGER,
             autoIncrement: true,
             allowNull: false,
-            primaryKey: true
+            primaryKey: true    
         },
         idUser: {
             type: Sequelize.INTEGER,
             allowNull: false,
             references: {
-                model: 'users', 
+                model: 'users',
                 key: 'id'
             }
         },
@@ -22,7 +22,7 @@ const Review = connection.define(
             type: Sequelize.INTEGER,
             allowNull: false,
             references: {
-                model: 'restaurants', 
+                model: 'restaurants',
                 key: 'id'
             }
         },

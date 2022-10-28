@@ -1,5 +1,5 @@
-import Sequelize from "sequelize";
-import connection from "../config/db.js";
+import Sequelize from 'sequelize';
+import connection from '../config/db.js';
 
 const Restaurant = connection.define(
     'restaurant',
@@ -8,7 +8,7 @@ const Restaurant = connection.define(
             type: Sequelize.INTEGER,
             autoIncrement: true,
             allowNull: false,
-            primaryKey: true
+            primaryKey: true    
         },
         name: {
             type: Sequelize.STRING,
