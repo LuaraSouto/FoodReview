@@ -8,10 +8,25 @@ restaurant.get('/', (req, res) => {
     res.send('Rota de Restaurantes');
 });
 
+restaurant.get('/find', async(req, res) => {
+    const restaurants = await Restaurant.findAll().catch(
+        (err) => {
+            console.log(err)
+        }
+    );
+
+        if(restaurants){
+            return res.json(restaurants)
+        } else{
+            return null
+        }
+
+});
+
 restaurant.post('/register', async (req, res) => {
     const { name, type, description, address } = req.body;
 
-    const alreadyExistsRestaurant = await restaurant.findOne(
+    const alreadyExistsRestaurant = await Restaurant.findOne(
         { where: { name } }
     ).catch((err) => console.log("Error: ", err));
 
