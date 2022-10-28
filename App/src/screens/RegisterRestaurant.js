@@ -25,7 +25,7 @@ const RegisterRestautant = ({ navigation }) => {
             );
             if (data.status === 200) {
                 console.log(data.data.massage)
-                navigation.navigate('Home')
+                navigation.navigate('RegisterRestaurant')
             }
 
         } catch (error) {
